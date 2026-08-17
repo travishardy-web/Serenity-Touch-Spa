@@ -1,1 +1,1624 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Serenity Touch Spa — a day spa in St. Peter, Barbados. Relax • Renew • Glow."
+  >
+
+  <title>Serenity Touch Spa | Relax • Renew • Glow</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    :root {
+      --cream: #fbf4eb;
+      --ivory: #fffaf4;
+      --gold: #b88a22;
+      --gold-soft: #d7b45d;
+      --rose: #b9787c;
+      --ink: #3c342e;
+      --muted: #756b63;
+      --line: #e6d7c8;
+      --shadow: 0 18px 50px rgba(80, 54, 29, 0.10);
+      --radius: 22px;
+    }
+
+    /* =========================
+       RESET
+    ========================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: "Montserrat", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* =========================
+       TOP BAR
+    ========================= */
+
+    .topbar {
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-align: center;
+      padding: 9px 15px;
+      background: #f2e5d8;
+      color: #6e5b4b;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 250, 244, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(184, 138, 34, 0.16);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #9b731c;
+    }
+
+    .brand img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .navlinks a {
+      transition: color 0.2s ease;
+    }
+
+    .navlinks a:hover {
+      color: var(--gold);
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    /* =========================
+       BUTTONS
+    ========================= */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 1px solid var(--gold);
+      padding: 12px 21px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: white;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(184, 138, 34, 0.22);
+    }
+
+    .btn.alt {
+      background: transparent;
+      color: var(--gold);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: calc(100vh - 85px);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 75px 0 90px;
+
+      background:
+        radial-gradient(
+          circle at 50% 35%,
+          #fffdf9 0,
+          #fbf4eb 48%,
+          #f4e7da 100%
+        );
+    }
+
+    .hero-logo {
+      width: min(280px, 65vw);
+      margin: 0 auto 24px;
+    }
+
+    .eyebrow {
+      font-size: 0.76rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--rose);
+      font-weight: 600;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Cormorant Garamond", serif;
+      line-height: 1.05;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(3.2rem, 8vw, 6.2rem);
+      font-weight: 600;
+      color: #9f7620;
+    }
+
+    .tagline {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.25rem, 3vw, 1.8rem);
+      letter-spacing: 0.12em;
+      color: #725c4d;
+      margin: 16px 0 28px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 32px;
+      color: var(--muted);
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
+    section {
+      padding: 92px 0;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 45px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      color: #9f7620;
+      margin: 8px 0 12px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: rgba(255, 250, 244, 0.92);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 0 26px 30px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 55px rgba(80, 54, 29, 0.14);
+    }
+
+    .card-image {
+      width: calc(100% + 52px);
+      height: 210px;
+      object-fit: cover;
+      margin-left: -26px;
+      margin-bottom: 24px;
+    }
+
+    .icon {
+      font-size: 1.6rem;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .card h3 {
+      font-size: 2rem;
+      color: #765d49;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      margin: 0 0 15px;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .service-list {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px 15px;
+    }
+
+    .service-list li {
+      position: relative;
+      padding-left: 17px;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .service-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .card-link {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .card-link:hover {
+      text-decoration: underline;
+    }
+
+    /* =========================
+       QUOTE
+    ========================= */
+
+    .quote-section {
+      padding: 70px 0;
+      text-align: center;
+      background: #eee0d2;
+    }
+
+    .quote-section p {
+      max-width: 800px;
+      margin: 0 auto 12px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      color: #765d49;
+    }
+
+    .quote-section span {
+      color: var(--rose);
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      background: #f3e5d8;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-art {
+      border: 1px solid var(--gold-soft);
+      border-radius: 50% 50% 45% 45%;
+      padding: 24px;
+      background: #fff9f1;
+      box-shadow: var(--shadow);
+    }
+
+    .about-art img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: contain;
+      border-radius: 20px;
+    }
+
+    .about-copy h2 {
+      font-size: clamp(2.7rem, 5vw, 4rem);
+      color: #9f7620;
+      margin: 10px 0 20px;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .detail {
+      padding: 20px;
+      border-top: 1px solid var(--gold-soft);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .detail strong {
+      display: block;
+      color: #765d49;
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .detail a {
+      color: var(--gold);
+      word-break: break-word;
+    }
+
+    .about-btn {
+      margin-top: 25px;
+    }
+
+    /* =========================
+       BOOKING
+    ========================= */
+
+    .booking {
+      background: var(--ivory);
+    }
+
+    .booking-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      width: 100%;
+      margin: 40px auto 0;
+    }
+
+    .booking-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 430px;
+      background: #ece7e1;
+      padding: 40px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .card-subtitle {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #706b64;
+      margin-bottom: 12px;
+    }
+
+    .card-title {
+      font-size: 32px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 500;
+      color: #2b2a27;
+      margin: 0 0 20px;
+      line-height: 1.2;
+    }
+
+    .card-description {
+      font-size: 15px;
+      color: #54504a;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .bullet-list {
+      margin: 0 0 30px;
+      padding-left: 20px;
+      color: #54504a;
+      font-size: 14px;
+    }
+
+    .bullet-list li {
+      margin-bottom: 8px;
+    }
+
+    .action-link {
+      display: inline-block;
+      margin-top: auto;
+      padding: 12px 20px;
+      width: fit-content;
+      border: 1px solid var(--gold);
+      border-radius: 999px;
+      background: var(--gold);
+      color: white;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
+
+    .action-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(184, 138, 34, 0.22);
+    }
+
+    .booking-bottom {
+      text-align: center;
+      margin-top: 45px;
+    }
+
+    .booking-bottom p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-section {
+      background: #f3e5d8;
+    }
+
+    .contact-box {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      font-size: clamp(2.7rem, 5vw, 4rem);
+      color: #9f7620;
+      margin: 10px 0 18px;
+    }
+
+    .contact-box > p {
+      max-width: 650px;
+      margin: 0 auto 35px;
+      color: var(--muted);
+    }
+
+    .contact-details {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 35px;
+    }
+
+    .contact-details div {
+      padding: 20px;
+      border-top: 1px solid var(--gold-soft);
+    }
+
+    .contact-details strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #765d49;
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .contact-details span,
+    .contact-details a {
+      color: var(--muted);
+      font-size: 0.88rem;
+      word-break: break-word;
+    }
+
+    .contact-details a:hover {
+      color: var(--gold);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 45px 0 28px;
+      text-align: center;
+      background: #eee0d2;
+      border-top: 1px solid var(--line);
+    }
+
+    footer .brand {
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    footer p {
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin: 5px 0;
+    }
+
+    .footer-tagline {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.2rem !important;
+      color: #765d49 !important;
+    }
+
+    /* =========================
+       BACK TO TOP
+    ========================= */
+
+    .back-to-top {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--gold);
+      color: white;
+      box-shadow: var(--shadow);
+      z-index: 10;
+      font-size: 20px;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-3px);
+    }
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .navlinks {
+        display: none;
+      }
+
+      .mobile-menu {
+        display: inline-flex;
+      }
+
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .details,
+      .contact-details {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-art {
+        max-width: 520px;
+        margin: auto;
+      }
+
+      .booking-container {
+        grid-template-columns: 1fr;
+      }
+
+      .booking-card {
+        min-height: auto;
+      }
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 560px) {
+
+      nav {
+        min-height: 66px;
+      }
+
+      .brand span {
+        display: none;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .hero {
+        padding: 55px 0 70px;
+      }
+
+      .hero-logo {
+        width: 220px;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 0 24px 28px;
+      }
+
+      .card-image {
+        width: calc(100% + 48px);
+        margin-left: -24px;
+      }
+
+      .service-list {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .booking-card {
+        padding: 28px 24px;
+      }
+
+      .card-title {
+        font-size: 28px;
+      }
+
+      .contact-details {
+        grid-template-columns: 1fr;
+      }
+
+      .actions .btn {
+        width: 100%;
+      }
+
+      .back-to-top {
+        right: 15px;
+        bottom: 15px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- =========================
+       TOP BAR
+  ========================= -->
+
+  <div class="topbar">
+    Elegance &amp; Luxury ✨
+    <span>•</span>
+    St. Peter, Barbados
+  </div>
+
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+
+    <div class="container">
+
+      <nav>
+
+        <a href="#home" class="brand">
+
+          <img
+            src="assets/serenity-touch-logo.png"
+            alt="Serenity Touch Spa Logo"
+          >
+
+          <span>Serenity Touch Spa</span>
+
+        </a>
+
+
+        <div class="navlinks">
+
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#booking">Booking</a>
+          <a href="#contact">Contact</a>
+
+        </div>
+
+
+        <a
+          href="#booking"
+          class="btn mobile-menu"
+        >
+          Book Now
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero" id="home">
+
+      <div class="container">
+
+        <img
+          class="hero-logo"
+          src="assets/serenity-touch-logo.png"
+          alt="Serenity Touch Spa"
+        >
+
+        <div class="eyebrow">
+          Day Spa • Barbados
+        </div>
+
+        <h1>
+          Serenity Touch
+        </h1>
+
+        <div class="tagline">
+          Relax • Renew • Glow
+        </div>
+
+        <p>
+          A peaceful day spa experience designed for rest,
+          renewal and a beautiful sense of wellbeing.
+          Step away from the everyday and enjoy your moment
+          of serenity.
+        </p>
+
+        <div class="actions">
+
+          <a
+            href="#booking"
+            class="btn"
+          >
+            Book Your Visit
+          </a>
+
+          <a
+            href="#services"
+            class="btn alt"
+          >
+            Explore Services
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================= -->
+
+    <section id="services">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <div class="eyebrow">
+            Our Treatments
+          </div>
+
+          <h2>
+            Time to unwind
+          </h2>
+
+          <p>
+            Enjoy a tranquil selection of spa, beauty and
+            wellness experiences designed to help you feel
+            relaxed, refreshed and beautiful.
+          </p>
+
+        </div>
+
+
+        <div class="services">
+
+
+          <!-- FACIALS -->
+
+          <article class="card">
+
+            <img
+              class="card-image"
+              src="images/face.jpg"
+              alt="Facial treatment at Serenity Touch Spa"
+            >
+
+            <div class="icon">✦</div>
+
+            <h3>
+              Facials
+            </h3>
+
+            <p>
+              Relaxing facial treatments designed to leave
+              your skin refreshed, nourished and glowing.
+            </p>
+
+            <a
+              class="card-link"
+              href="#booking"
+            >
+              Book Treatment →
+            </a>
+
+          </article>
+
+
+          <!-- MASSAGE -->
+
+          <article class="card">
+
+            <img
+              class="card-image"
+              src="images/body.jpg"
+              alt="Massage treatment at Serenity Touch Spa"
+            >
+
+            <div class="icon">♡</div>
+
+            <h3>
+              Massage
+            </h3>
+
+            <p>
+              Soothe away tension and enjoy a calming massage
+              experience created to help you relax and recharge.
+            </p>
+
+            <a
+              class="card-link"
+              href="#booking"
+            >
+              Book Treatment →
+            </a>
+
+          </article>
+
+
+          <!-- WAXING -->
+
+          <article class="card">
+
+            <img
+              class="card-image"
+              src="images/wax.jpg"
+              alt="Waxing service at Serenity Touch Spa"
+            >
+
+            <div class="icon">✧</div>
+
+            <h3>
+              Waxing
+            </h3>
+
+            <p>
+              Professional waxing services for smooth,
+              beautiful results.
+            </p>
+
+            <ul class="service-list">
+              <li>Legs</li>
+              <li>Underarms</li>
+              <li>Upper Lip</li>
+              <li>Eyebrows</li>
+              <li>Arms</li>
+              <li>Chin</li>
+            </ul>
+
+            <a
+              class="card-link"
+              href="#booking"
+            >
+              Book Treatment →
+            </a>
+
+          </article>
+
+
+          <!-- NAILS -->
+
+          <article class="card">
+
+            <img
+              class="card-image"
+              src="images/nail.jpg"
+              alt="Nail services at Serenity Touch Spa"
+            >
+
+            <div class="icon">✦</div>
+
+            <h3>
+              Nails
+            </h3>
+
+            <p>
+              Beautiful nail services tailored to your
+              personal style and occasion.
+            </p>
+
+            <ul class="service-list">
+              <li>Acrylic Nails</li>
+              <li>Gel X</li>
+              <li>Hard Gel (BIAB)</li>
+              <li>Poly Gel</li>
+            </ul>
+
+            <a
+              class="card-link"
+              href="#booking"
+            >
+              Book Treatment →
+            </a>
+
+          </article>
+
+
+          <!-- HAIR -->
+
+          <article class="card">
+
+            <img
+              class="card-image"
+              src="images/hair.jpg"
+              alt="Hair services at Serenity Touch Spa"
+            >
+
+            <div class="icon">✧</div>
+
+            <h3>
+              Hair
+            </h3>
+
+            <p>
+              Beautiful styles designed to complement
+              your personal look.
+            </p>
+
+            <ul class="service-list">
+              <li>Locs</li>
+              <li>Braiding Hair</li>
+            </ul>
+
+            <a
+              class="card-link"
+              href="#booking"
+            >
+              Book Treatment →
+            </a>
+
+          </article>
+
+
+          <!-- EYELASHES -->
+
+          <article class="card">
+
+            <img
+              class="card-image"
+              src="images/lashes.jpg"
+              alt="Eyelash services at Serenity Touch Spa"
+            >
+
+            <div class="icon">♡</div>
+
+            <h3>
+              Eyelashes
+            </h3>
+
+            <p>
+              Enhance your natural beauty with our
+              lash care services.
+            </p>
+
+            <ul class="service-list">
+              <li>Eyelash Tinting</li>
+            </ul>
+
+            <a
+              class="card-link"
+              href="#booking"
+            >
+              Book Treatment →
+            </a>
+
+          </article>
+
+
+          <!-- BROWS -->
+
+          <article class="card">
+
+            <img
+              class="card-image"
+              src="images/brows.jpg"
+              alt="Eyebrow services at Serenity Touch Spa"
+            >
+
+            <div class="icon">✦</div>
+
+            <h3>
+              Brows
+            </h3>
+
+            <p>
+              Give your brows a beautiful, defined
+              and polished finish.
+            </p>
+
+            <ul class="service-list">
+              <li>Eyebrow Tinting</li>
+            </ul>
+
+            <a
+              class="card-link"
+              href="#booking"
+            >
+              Book Treatment →
+            </a>
+
+          </article>
+
+
+          <!-- HANDS & FEET -->
+
+          <article class="card">
+
+            <img
+              class="card-image"
+              src="images/feet.jpg"
+              alt="Manicure and pedicure services at Serenity Touch Spa"
+            >
+
+            <div class="icon">✧</div>
+
+            <h3>
+              Hands &amp; Feet
+            </h3>
+
+            <p>
+              Treat yourself to a little extra care
+              from fingertips to toes.
+            </p>
+
+            <ul class="service-list">
+              <li>Manicure</li>
+              <li>Pedicure</li>
+            </ul>
+
+            <a
+              class="card-link"
+              href="#booking"
+            >
+              Book Treatment →
+            </a>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUOTE
+    ========================= -->
+
+    <section class="quote-section">
+
+      <div class="container">
+
+        <p>
+          Take a moment to pause. Your wellbeing deserves it.
+        </p>
+
+        <span>
+          Serenity Touch Spa
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section class="about" id="about">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+
+          <div class="about-art">
+
+            <img
+              src="assets/serenity-touch-logo.png"
+              alt="Serenity Touch Spa logo"
+            >
+
+          </div>
+
+
+          <div class="about-copy">
+
+            <div class="eyebrow">
+              Welcome to Serenity
+            </div>
+
+            <h2>
+              Elegance, comfort &amp; calm
+            </h2>
+
+            <p>
+              Serenity Touch Spa is a day spa in St. Peter,
+              Barbados, created around one simple idea:
+              give yourself permission to pause.
+            </p>
+
+            <p>
+              Whether you are treating yourself or enjoying
+              a relaxing day with someone special, we invite
+              you to relax, renew and glow in a warm,
+              elegant setting.
+            </p>
+
+
+            <div class="details">
+
+              <div class="detail">
+                <strong>Location</strong>
+                Road View, St. Peter, Barbados
+              </div>
+
+              <div class="detail">
+                <strong>Address</strong>
+                Sweet Home Road
+              </div>
+
+              <div class="detail">
+                <strong>Email</strong>
+
+                <a href="mailto:serenitytouchspabarbados@gmail.com">
+                  serenitytouchspabarbados@gmail.com
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <a
+              href="#booking"
+              class="btn about-btn"
+            >
+              Plan Your Visit
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         BOOKING
+    ========================= -->
+
+    <section class="booking" id="booking">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <div class="eyebrow">
+            Reservations
+          </div>
+
+          <h2>
+            Book your serenity
+          </h2>
+
+          <p>
+            Choose your preferred treatment, date and time.
+            We look forward to welcoming you to
+            Serenity Touch Spa.
+          </p>
+
+        </div>
+
+
+        <div class="booking-container">
+
+
+          <!-- EMAIL BOOKING -->
+
+          <div class="booking-card">
+
+            <div>
+
+              <div class="card-subtitle">
+                Your Visit
+              </div>
+
+              <h2 class="card-title">
+                Make it your<br>
+                moment.
+              </h2>
+
+              <p class="card-description">
+                Prefer to contact us directly?
+                Send us an email with your preferred treatment,
+                date and time.
+              </p>
+
+              <ul class="bullet-list">
+
+                <li>
+                  Choose your preferred treatment
+                </li>
+
+                <li>
+                  Share your preferred date and time
+                </li>
+
+                <li>
+                  We will respond by email
+                </li>
+
+              </ul>
+
+            </div>
+
+
+            <a
+              href="mailto:serenitytouchspabarbados@gmail.com"
+              class="action-link"
+            >
+              Email The Spa
+            </a>
+
+          </div>
+
+
+          <!-- ONLINE BOOKING -->
+
+          <div class="booking-card">
+
+            <div>
+
+              <div class="card-subtitle">
+                Online Booking
+              </div>
+
+              <h2 class="card-title">
+                Book your<br>
+                appointment.
+              </h2>
+
+              <p class="card-description">
+                Choose your treatment, preferred date and
+                available time directly through our online
+                booking system.
+              </p>
+
+              <p class="card-description">
+                Select your service and available appointment
+                time through our secure online booking page.
+              </p>
+
+            </div>
+
+
+            <a
+              href="https://app.acuityscheduling.com/schedule.php?owner=40163015"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="action-link"
+            >
+              Book Now
+            </a>
+
+          </div>
+
+
+        </div>
+
+
+        <div class="booking-bottom">
+
+          <p>
+            Ready to relax, renew and glow?
+          </p>
+
+          <a
+            href="https://app.acuityscheduling.com/schedule.php?owner=40163015"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn"
+          >
+            Schedule Your Appointment
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section
+      class="contact-section"
+      id="contact"
+    >
+
+      <div class="container">
+
+        <div class="contact-box">
+
+          <div class="eyebrow">
+            Get In Touch
+          </div>
+
+          <h2>
+            We would love to welcome you.
+          </h2>
+
+          <p>
+            Have a question about our services or need help
+            choosing a treatment?
+            Get in touch with Serenity Touch Spa.
+          </p>
+
+
+          <div class="contact-details">
+
+            <div>
+
+              <strong>
+                Location
+              </strong>
+
+              <span>
+                Road View, St. Peter, Barbados
+              </span>
+
+            </div>
+
+
+            <div>
+
+              <strong>
+                Address
+              </strong>
+
+              <span>
+                Sweet Home Road
+              </span>
+
+            </div>
+
+
+            <div>
+
+              <strong>
+                Email
+              </strong>
+
+              <a href="mailto:serenitytouchspabarbados@gmail.com">
+                serenitytouchspabarbados@gmail.com
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="actions">
+
+            <a
+              class="btn"
+              href="mailto:serenitytouchspabarbados@gmail.com"
+            >
+              Contact the Spa
+            </a>
+
+            <a
+              class="btn alt"
+              href="#booking"
+            >
+              Book Your Visit
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <a
+        class="brand"
+        href="#home"
+      >
+
+        <img
+          src="assets/serenity-touch-logo.png"
+          alt="Serenity Touch Spa"
+        >
+
+        <span>
+          Serenity Touch Spa
+        </span>
+
+      </a>
+
+      <p class="footer-tagline">
+        Relax • Renew • Glow
+      </p>
+
+      <p>
+        Road View, St. Peter
+        •
+        Sweet Home Road
+        •
+        Barbados
+      </p>
+
+      <p>
+
+        <a href="mailto:serenitytouchspabarbados@gmail.com">
+          serenitytouchspabarbados@gmail.com
+        </a>
+
+      </p>
+
+      <p>
+        © 2026 Serenity Touch Spa. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- BACK TO TOP -->
+
+  <a
+    href="#home"
+    class="back-to-top"
+    aria-label="Back to top"
+  >
+    ↑
+  </a>
+
+</body>
+
+</html>
